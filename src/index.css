@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+:root{
+        --serif:"DM Serif Text", serif;
+        --qwitcher: "Qwitcher Grypen", cursive;
+}
+*{
+    scroll-behavior: smooth;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.qwitcher{
+    font-family: var(--qwitcher);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bgImg {
+    background-size: contain;
+}
+#href a{
+    text-decoration: none;
+}
+
+#cd {
+    --animate-delay: 1s;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transition-behavior: smooth ;
+        transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+}
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+    }
+}
+.appear {
+    animation: appear linear;
+    -webkit-animation:  appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+}
